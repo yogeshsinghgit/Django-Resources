@@ -30,6 +30,8 @@ source venvName/bin/activate
 ## Required Modules/Libraries/Packages:
 
 * ```pip install python-dotenv```
+  
+* ```pip install psycopg2``` # if using postgresql db
 
 * ```pip install django```
 
@@ -102,11 +104,18 @@ REST_FRAMEWORK = {
     ),
 }
 
+# DJOSER = {
+#     'SERIALIZERS': {
+#         'user_create': 'yourapp.serializers.CustomUserCreateSerializer',  # Custom user creation serializer
+#         'user': 'yourapp.serializers.CustomUserSerializer',  # Custom user detail serializer
+#     },
+# }
+
 # Djoser settings (optional)
-DJOSER = {
-    'LOGIN_FIELD': 'email',  # Specify the login field (default is 'username')
-    # You can add more settings here as needed
-}
+# DJOSER = {
+#     'LOGIN_FIELD': 'email',  # Specify the login field (default is 'username')
+#     # You can add more settings here as needed
+# }
 ```
 
 ### Step 2. Add URLs
